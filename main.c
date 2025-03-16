@@ -1,11 +1,14 @@
 #include<stdio.h>
-#include 
 //udf data type node
 typedef struct node
 {
     int id;
     struct node *next;
 } node;
+
+//create a FIle to save infor..
+void createfile();
+void addStudent();
 int main()
 {
     node *head = malloc(sizeof(node));
@@ -24,8 +27,15 @@ int main()
             printf("#######Enroll new Student########");
             printf("Enter student id: ");
             scanf("%d", &st_id);
-            addStudent(head, st_id);
-        }
+        }else
     }
     
+}
+void createfile(char s1[][.txt]){
+    FILE *file;
+    file = fopen("s1", "w");
+    if(file == NULL){
+        printf("File not created\n");
+        return 1;
+    }
 }

@@ -6,4 +6,5 @@ int main(){
     printf("%d\n", a+b);
     printf("%d", b-a);
     sbsdcbcv
+    sss
 }

@@ -55,3 +55,7 @@ void createfile(char s1[])
         printf("\"%s\" file created successfully\n");
     }
 }
+void addStudent(head , st_id){
+    
+    
+}

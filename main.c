@@ -8,10 +8,17 @@ typedef struct node
 } node;
 
 // create a FIle to save infor..
-void createfile();
-void addStudent();
+void createfile(char s1[]);
+void addStudent(node *head ,int st_id);
 int main()
 {
+    node *head = malloc(sizeof(node));
+    head->next = NULL;
+    if (head == NULL)
+    {
+        printf("Memory allocation not possible\n");
+        return 1;
+    }
     while (1)
     {
         int action;
@@ -48,14 +55,21 @@ void createfile(char s1[])
         printf("\"%s\" file created successfully\n");
     }
 }
-void addStudent(node head ,int st_id){
-    node *head = malloc(sizeof(node));
-    head->next = NULL;
-    if (head == NULL)
+void addStudent(node *head ,int st_id){
+    node *tmp = malloc(sizeof(node));
+    if (tmp == NULL)
     {
         printf("Memory allocation not possible\n");
-        return 1;
     }
+    tmp->id = st_id;
+    tmp->next = NULL;
     
-    
+    //connect prev node with current one
+    node *curr;
+    curr = head;
+    while (curr->next != NULL)
+    {
+        curr = curr->next;
+    }
+    curr->next = tmp;
 }

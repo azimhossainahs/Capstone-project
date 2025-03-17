@@ -70,6 +70,7 @@ void addStudent(node *head ,int st_id){
     while (curr->next != NULL)
     {
         curr = curr->next;
+        
     }
     curr->next = tmp;
 }

@@ -12,13 +12,6 @@ void createfile();
 void addStudent();
 int main()
 {
-    node *head = malloc(sizeof(node));
-    head->next = NULL;
-    if (head == NULL)
-    {
-        printf("Memory allocation not possible\n");
-        return 1;
-    }
     while (1)
     {
         int action;
@@ -55,7 +48,14 @@ void createfile(char s1[])
         printf("\"%s\" file created successfully\n");
     }
 }
-void addStudent(head , st_id){
+void addStudent(node head ,int st_id){
+    node *head = malloc(sizeof(node));
+    head->next = NULL;
+    if (head == NULL)
+    {
+        printf("Memory allocation not possible\n");
+        return 1;
+    }
     
     
 }
